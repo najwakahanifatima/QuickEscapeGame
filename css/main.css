@@ -1,0 +1,33 @@
+body {
+    background: url("/assets/bg.png") scroll no-repeat;
+    font-family: "Jersey 15";
+    color: white;
+    margin: 2rem;
+    font-size: 1.5rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 6rem;
+    letter-spacing: 2px;
+    border: 2px white solid;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#overview {
+    display: grid;
+    text-align: right;
+    grid-template-columns: 40% 60%;
+    border: 2px white solid;
+}
+
+#cat {
+    max-width: 150px;
+}
