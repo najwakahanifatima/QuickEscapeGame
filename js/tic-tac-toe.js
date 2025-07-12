@@ -1,6 +1,7 @@
 const board = document.getElementById('ttt-board');
 const state = document.getElementById('ttt-status');
 const resetBtn = document.getElementById('reset');
+const instruction = document.getElementById('ttt-instruction');
 
 let currentPlayer = 'You';
 let cells = Array(9).fill(null);
@@ -30,12 +31,15 @@ function createCell(index) {
         if (checkWin(currentPlayer)) {
             state.textContent = `${currentPlayer} Wins!`;
             gameEnd = true;
+            instruction.textContent =  `Click reset button below to replay`;
         } else if (cells.every(cell => cell)) {
             state.textContent = `It is a draw!`;
             gameEnd = true;
+            instruction.textContent =  `Click reset button below to replay`;
         } else {
             currentPlayer = 'Computer';
             state.textContent = `Computer's Turn!`;
+            instruction.textContent = `Please wait a moment ...`
 
             // short delay
             setTimeout(() => {
@@ -71,6 +75,7 @@ resetBtn.addEventListener('click', () => {
     cells = Array(9).fill(null);
     gameEnd = false;
     state.textContent = 'Your Turn!';
+    instruction.textContent = 'Choose your first move';
     renderBoard();
 })
 
@@ -93,12 +98,14 @@ function computerMove() {
     if (checkWin('Computer')) {
         state.textContent = `Computer Wins!`;
         gameEnd = true;
+        instruction.textContent =  `Click reset button below to replay`;
     } else if (cells.every(cell => cell)) {
         state.textContent = `It is a draw!`;
         gameEnd = true;
     } else {
         currentPlayer = 'You';
         state.textContent = `Your Turn!`;
+        instruction.textContent = 'Choose your next move';
     }
 }
 
