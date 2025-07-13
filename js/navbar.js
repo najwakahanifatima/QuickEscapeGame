@@ -13,10 +13,10 @@ class NavBar extends HTMLElement {
         const nav = document.createElement('nav');
         nav.classList.add('nav');
         nav.innerHTML = `
-            <a href="index.html">Home</a> 
-            <a href="index.html#header">About</a>
-            <a href="index.html#games">Games</a>
-            <a href="index.html#information">Information</a>
+            <a href="/index.html">Home</a> 
+            <a href="/index.html#header">About</a>
+            <a href="/index.html#games">Games</a>
+            <a href="/index.html#information">Information</a>
         `;
 
         this.shadowRoot.appendChild(link);
