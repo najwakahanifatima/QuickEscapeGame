@@ -1,5 +1,5 @@
 body {
-    background: url("/assets/bg.png") no-repeat center center scroll;
+    background: url("../assets/bg.png") no-repeat center center scroll;
     background-size: cover;
     font-family: "Jersey 15";
     color: white;
