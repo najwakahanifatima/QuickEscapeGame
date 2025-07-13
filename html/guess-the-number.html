@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8">
+    <title> Guess The Number </title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/guess-the-number.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jersey 15&effect=3d">
+</head>
+
+
+
+<!-- Body -->
+<body>
+    <nav-bar></nav-bar>
+
+    <main>
+        <h1> Guess The Number </h1>
+        <div class="heart-container" id="heart-container">
+            <!-- 10 hearts -->
+            ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+        </div>
+        <p class="yellow"> Your Number: </p>
+        <section id="number-box">
+            <img src="/assets/number-box.png" alt="Number Box">
+            <p id="user-guess-display"> -- </p>
+            <!-- the number is here -->
+        </section>
+        <label for="guess-input"> Enter a number between 1 - 100: </label>
+        <section id="input-container">
+            <input type="number" id="guess-input" placeholder="Input your guess here" min="1" max="100">
+            <button id="submit-guess"> 
+                <img src="/assets/guess.png" alt="Reset Button">    
+            </button>
+        </section>
+        <p id="guess-feedback"> Make a guess! </p>
+        <button id="reset"> 
+            <img src="/assets/reset.png" alt="Reset Button">    
+        </button>
+    </main>
+</body>
+
+<script type="module" src="/js/guess-the-number.js" ></script>
+<script type="module" src="/js/navbar.js"></script>
+
+</html>

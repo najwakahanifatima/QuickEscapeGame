@@ -1,0 +1,76 @@
+h1 {
+    margin-bottom: 0;
+}
+
+#number-box {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#number-box img {
+    max-width: 400px;
+}
+
+#user-guess-display {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 7rem;
+    color: #FFD700; /* yellow */
+    pointer-events: none;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#input-container input {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    width: 250px;
+    height: 20px;
+    transition: border-color 0.3s;
+}
+
+#input-container input:focus {
+    border-color: #666;
+}
+
+#guess-game {
+    text-align: center;
+    margin-top: 40px;
+    font-family: sans-serif;
+}
+
+.guess-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#guess-input {
+    padding: 8px;
+    width: 200px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+#submit-guess,
+#reset-guess {
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
