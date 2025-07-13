@@ -1,3 +1,5 @@
+/* Rock Paper Scissor Game Logic */
+
 const choices = ['stone', 'paper', 'scissor'];
 const userImg = document.getElementById('user-choice');
 const computerImg = document.getElementById('computer-choice');
@@ -6,6 +8,7 @@ const buttons = document.querySelectorAll('.choice-btn');
 const resetBtn = document.getElementById('reset');
 const resultImages = document.getElementById('rps-results');
 
+// add click event listener for each option (stone, paper, scissor)
 buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         const userChoice = btn.dataset.choice;
@@ -28,6 +31,7 @@ buttons.forEach(btn => {
   });
 });
 
+// reset button click event listener
 resetBtn.addEventListener('click', () => {
     userImg.src = '';
     computerImg.src = '';
@@ -36,6 +40,7 @@ resetBtn.addEventListener('click', () => {
     buttons.forEach(b => b.disabled = false);
 });
 
+// result of the game
 function getResult(user, comp) {
     if (user === comp) return "It's a Draw!";
     if (

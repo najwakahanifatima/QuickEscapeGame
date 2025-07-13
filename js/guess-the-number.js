@@ -1,3 +1,5 @@
+/* Guess The Number Game Logic */
+
 let randomNumber = Math.floor(Math.random() * 100) + 1;
 let attemptsLeft = 10;
 
@@ -7,14 +9,16 @@ const submitBtn = document.getElementById('submit-guess');
 const resetBtn = document.getElementById('reset');
 const heartContainer = document.getElementById('heart-container');
 const guessDisplay = document.getElementById('user-guess-display');
+const instruction = document.getElementById('instruction');
 
-console.log('random number: ', randomNumber);
-
+// update heart/attempts
 function updateHearts() {
     heartContainer.textContent = '❤️'.repeat(attemptsLeft);
 }
 
+// click event when the user guess
 submitBtn.addEventListener('click', () => {
+    instruction.textContent = "Your previous guess: "
     const guess = Number(input.value);
     console.log('user input: ', guess);
 
@@ -41,6 +45,7 @@ submitBtn.addEventListener('click', () => {
     }
 });
 
+// reset button click event
 resetBtn.addEventListener('click', () => {
     console.log('reset clicked');
     randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -51,6 +56,7 @@ resetBtn.addEventListener('click', () => {
     submitBtn.disabled = false;
     feedback.textContent = "Make a guess!";
     guessDisplay.textContent = '--';
+    instruction.innerHTML = "We have chosen a random number between 1-100. You have 10 attempts. <br> Guess it with the hints below the input box!"
 });
 
 updateHearts();

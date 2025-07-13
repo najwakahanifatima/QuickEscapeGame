@@ -1,3 +1,6 @@
+/* Game Card Component */
+
+// transform game title to correlated filename
 function transformTitle(text) {
     return text.toLowerCase().replace(/\s+/g, '-');
 }
@@ -5,7 +8,7 @@ function transformTitle(text) {
 class Card extends HTMLElement {
     constructor() {
         super();
-        this.attachShadow({mode: 'open'}); //use shadow DOM
+        this.attachShadow({mode: 'open'});
     }
 
     async connectedCallback() {
@@ -13,6 +16,7 @@ class Card extends HTMLElement {
         const filename = transformTitle(title);
         const targetUrl = `/html/${filename}.html`;
 
+        // add css styling
         const cssText = await fetch('/css/game-card.css').then(res => res.text());
         const styleEl = document.createElement('style');
         styleEl.textContent = cssText;

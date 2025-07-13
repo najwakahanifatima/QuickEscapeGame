@@ -1,3 +1,5 @@
+/* Tic Tac Toe Game Logic */
+
 const board = document.getElementById('ttt-board');
 const state = document.getElementById('ttt-status');
 const resetBtn = document.getElementById('reset');
@@ -8,12 +10,14 @@ let cells = Array(9).fill(null);
 let cellElements = [];
 let gameEnd = false;
 
+// get image source based on user's cell
 const getImageSrc = (value) => {
     if (value === 'You') return '/assets/ttt-user.png';
     if (value === 'Computer') return '/assets/ttt-computer.png';
     return '/assets/ttt-base.png';
 };
 
+// create cells in the board
 function createCell(index) {
     const btn = document.createElement('button');
     btn.classList.add('cell');
@@ -41,7 +45,7 @@ function createCell(index) {
             state.textContent = `Computer's Turn!`;
             instruction.textContent = `Please wait a moment ...`
 
-            // short delay
+            // short delay fpr computer's turn
             setTimeout(() => {
                 computerMove();
             }, 500);
@@ -51,6 +55,7 @@ function createCell(index) {
     return btn;
 }
 
+// rendering the board
 function renderBoard() {
     board.innerHTML = '';
     cellElements = [];
@@ -61,6 +66,7 @@ function renderBoard() {
     }
 }
 
+// check win logic
 function checkWin(player) {
     const wins = [
         [0,1,2],[3,4,5],[6,7,8], // rows
@@ -70,6 +76,7 @@ function checkWin(player) {
     return wins.some(comb => comb.every(i => cells[i] === player));
 }
 
+// reset button click event listener
 resetBtn.addEventListener('click', () => {
     currentPlayer = 'You';
     cells = Array(9).fill(null);
@@ -79,6 +86,8 @@ resetBtn.addEventListener('click', () => {
     renderBoard();
 })
 
+
+// computer's turn logic
 function computerMove() {
     if (gameEnd) return;
 
