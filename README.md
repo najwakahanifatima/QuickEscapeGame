@@ -11,7 +11,7 @@
 1. Using Live Server
 - Clone the project folder in VS Code.
 - Install the Live Server extension (by Ritwick Dey).
-- Right-click the ```/html/main.html``` file → "Open with Live Server".
+- Right-click the ```index.html``` file → "Open with Live Server".
 - It will open in your browser at a local address.
 
 2. Using Node.js
