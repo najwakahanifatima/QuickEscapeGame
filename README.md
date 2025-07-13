@@ -1,5 +1,9 @@
 # HTML, CSS, and Javascript Project Based Learning
 
+This project is made as a Hands-On submission of SISTECH Portfolio Program in Front End Engineering 2025.
+
+Deployment link: https://quickescape-game.wasmer.app/
+
 <img width="2845" height="1541" alt="image" src="https://github.com/user-attachments/assets/56644c22-31ae-4a8c-bfeb-599628f7c36a" />
 
 ### 🛠️ Languages & Tools
@@ -19,4 +23,3 @@
   ```
   npx http-server
   ```
-This project is made as a Hands-On submission of SISTECH Portfolio Program in Front End Engineering 2025.
