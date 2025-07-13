@@ -11,12 +11,7 @@
 
 <!-- Body -->
 <body>
-    <nav class="nav">
-        <a> Home </a> 
-        <a> About </a>
-        <a> Games </a>
-        <a> Contributor </a>
-    </nav>
+    <nav-bar></nav-bar>
 
     <main>
         <section id="header"> 
@@ -28,11 +23,13 @@
                     the place for u to escape real quick from deadlines, assignments,
                     and to-dos with playing simple & non-stressfull game!
                 </p>
-                <button> <img src="/assets/arrow.png" alt="down arrow button"> </button>
+                <button onclick="document.getElementById('games').scrollIntoView({ behavior: 'smooth' })"> 
+                    <img src="/assets/arrow.png" alt="down arrow button" onclick="">
+                </button>
             </aside>
         </section>
         <section id="games">
-            <h2> Choose Your Escape </h2>
+            <h2 class="dark-blue"> Choose Your Escape </h2>
             <section class="card-grid">
                 <game-card title="Tic Tac Toe"></game-card>
                 <game-card title="Rock Paper Scissor"></game-card>
@@ -41,38 +38,13 @@
         </section>
     </main>
     
-    <footer>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
-        <h2> Contributor </h2>
+    <footer id="information">
+        <h2 class="dark-blue"> Information </h2>
+        <p class="dark-blue"> This is a simple project-based learning in creating game-based website using plain html, css, and javascript. </p>
     </footer>
 </body>
 
-<script type="module" src="/js/Card.js"></script>
+<script type="module" src="/js/card.js"></script>
+<script type="module" src="/js/navbar.js"></script>
+
 </html>
