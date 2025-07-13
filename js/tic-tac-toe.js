@@ -12,8 +12,8 @@ let gameEnd = false;
 
 // get image source based on user's cell
 const getImageSrc = (value) => {
-    if (value === 'You') return '/assets/ttt-user.png';
-    if (value === 'Computer') return '/assets/ttt-computer.png';
+    if (value === 'You') return '../assets/ttt-user.png';
+    if (value === 'Computer') return '../assets/ttt-computer.png';
     return '/assets/ttt-base.png';
 };
 

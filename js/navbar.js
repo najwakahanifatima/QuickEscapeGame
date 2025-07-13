@@ -9,7 +9,7 @@ class NavBar extends HTMLElement {
     connectedCallback() {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = '/css/main.css';
+        link.href = '../css/main.css';
         const nav = document.createElement('nav');
         nav.classList.add('nav');
         nav.innerHTML = `

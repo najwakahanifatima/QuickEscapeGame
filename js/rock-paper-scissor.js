@@ -15,9 +15,9 @@ buttons.forEach(btn => {
         const computerChoice = choices[Math.floor(Math.random() * 3)];
 
         // update images
-        userImg.src = `/assets/rps-${userChoice}.png`;
+        userImg.src = `../assets/rps-${userChoice}.png`;
         userImg.alt = userChoice;
-        computerImg.src = `/assets/rps-${computerChoice}.png`;
+        computerImg.src = `../assets/rps-${computerChoice}.png`;
         computerImg.alt = computerChoice;
 
         // determine winner
