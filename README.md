@@ -12,14 +12,15 @@ Deployment link: https://quickescape-game.wasmer.app/
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-### ▶️ How to Run
-1. Using Live Server
+### ▶️ How to Use
+1. Visit the deployed program [here](https://quickescape-game.wasmer.app/)
+2. Using Live Server
 - Clone the project folder in VS Code.
 - Install the Live Server extension (by Ritwick Dey).
 - Right-click the ```index.html``` file → "Open with Live Server".
 - It will open in your browser at a local address.
 
-2. Using Node.js
+3. Using Node.js
   ```
   npx http-server
   ```
