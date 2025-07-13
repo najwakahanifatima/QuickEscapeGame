@@ -1,3 +1,59 @@
-h2 {
-    margin-top: 0;
+#rps-choices {
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+  margin: 20px 0;
+}
+
+.choice-btn {
+    background: none;
+    border: none;
+}
+
+.choice-btn img {
+  width: 100px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.choice-btn img:hover {
+  transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#rps-results {
+  display: none;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 10px;
+}
+
+#rps-results img {
+  width: 60px;
+  height: auto;
+}
+
+#rps-results.show {
+  display: flex;
+}
+
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.result-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rps-results p {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
